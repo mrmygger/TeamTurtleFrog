@@ -3,52 +3,41 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  
 }
-
-
-.main__container {
-  display: -ms-grid;
-  display: grid;
-      grid-template-columns: repeat(4, 25%);
-      grid-template-rows: repeat(4, 25%);
+body {
+  background-image: url(/fotos/Background_forside.png);
 }
-
-/*Foto*/
+    /*BACKGROUND */
 .photo__forside {
-  width: 100vh;
-  display: -ms-inline-grid;
-  display: inline-grid;
-  grid-column-start: 1;
-  grid-row-start: 1;
+  height: 100vh;
+  width: 50vw;
+  top: 0;
 }
 .photo__forside img {
-width: 90%;  
-height: 100vh;
-}
-.main__container {
-
-background: linear-gradient(0deg, #E7E7E7, #E7E7E7), linear-gradient(0deg, #B4B644, #B4B644);
-/*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);*/
+  height: 100%;
+  width: 100%;
+  
 }
 
 .frogFeet {
- 
-width: 50vh;
-height: 100vh;
-right: 0px;
-top: 0px;
-
-opacity: 0.5;
+  display: grid;
+  grid-template-columns: repeat(4, 25vw);
+  grid-template-rows: repeat(4, 25vh);
 }
+
 /*Speech bubble - https://codepen.io/run-time/pen/VNRBJd */
 .speechBubble {
+  font-size: 24px;
   position: absolute;
-  width: 778px;
-  height: 300px;
-  left: 500px;
-  top: 20px;
+  width: 45vw;
+  height: 34vh;
+  left: 33vw;
+  top: 10px;
   background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   grid-column-start: 2;
   grid-row-start: 1;
   border-radius: 40px;
@@ -59,11 +48,14 @@ opacity: 0.5;
   font-family: 'Quicksand', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 40px;
-  line-height: 60px;
-  z-index: 10;
+  font-size: 2em;
+  line-height: normal;
 }
 
+.speechBubble h3 {
+  font-size: 1.5em;
+  margin-top: .3em;
+}
 .speechBubble:before {
   content: "";
   width: 0px;
@@ -76,39 +68,32 @@ opacity: 0.5;
   left: 32px;
   bottom: -100px;
 }
-.h3__forside {
-   left: 926px;
-   top: 279px;
-   font-size: 50px;
-   line-height: 90px;
-   padding: 0.5em;
- }
 
 /*Blob button - https://codepen.io/hilwat/pen/BeemVX*/
 .button {
-
-  grid-column-start: 3;
-  grid-row-start: 3;
+  grid-column: 3 / span 2; 
+  grid-row-start: 4;
   margin-top: 0px;
-  text-align: center;
+  text-align: right;
   border-radius: 30px;
+  justify-self: center;
 }
 
 .blob-btn {
-  width: 480px;
-  height: 95px;
+  position: absolute;
+  width: 28vw;
+  height: 10vh;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  z-index: 1;
   position: relative;
-  padding: 20px 46px;
+  padding: 10px 46px;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: #B81365;
-  font-size: 24px;
+  color: #000000;
+  font-size: 48px;
   font-weight: bold;
   background-color: transparent;
   outline: none;
@@ -127,8 +112,9 @@ opacity: 0.5;
   top: 0;
   width: 100%;
   height: 100%;
-  /*border: 6px solid #B81365;*/
-  border-radius: 30px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
 }
 
 .blob-btn:after {
@@ -154,7 +140,7 @@ opacity: 0.5;
   transition: all 0.3s;
   left: 0;
   top: 0;
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .blob-btn__inner {
@@ -165,7 +151,7 @@ opacity: 0.5;
   top: 0;
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 20px;
   background: #ffffff;
 }
 
@@ -180,7 +166,7 @@ opacity: 0.5;
 .blob-btn__blob {
   position: absolute;
   top: 6px;
-  width: 25%;
+  width: 30%;
   height: 100%;
   background: #B81365;
   border-radius: 50%;
@@ -234,42 +220,46 @@ opacity: 0.5;
             transform: translateZ(0) scale(1.4);
   }
 }
+@media screen and (min-width: 1296px) {
+  .speechBubble {
+    width: 33vw;
+    height: 35vh;
+    left: 33vw;
+    top: 1em;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    grid-column-start: 2;
+    grid-row-start: 1;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2em;
+    line-height: normal;
 
-/*Ryste knap - https://codepen.io/jessekernaghan/pen/CGqhD
-.blob-btn {
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-name: shrink;
-          animation-name: shrink;
+}
+.speechBubble h3 {
+font-size: 1.5em;
+  margin-top: .5em;
+}
+}
+@media screen and (max-width: 950px) {
+  .speechBubble {
+  font-size: 22px;
+  line-height: normal;
+  height: 22vh;
+  top: 5em;
+  width: 50vw;
+  left: 25vw;
+}
+.speechBubble h3 {
+  font-size: 30px;
+}
 }
 
-@-webkit-keyframes shrink {
-  0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  49% {
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-
-@keyframes shrink {
-  0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  49% {
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}*/
 /*# sourceMappingURL=styles.css.map */
