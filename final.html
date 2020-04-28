@@ -10,13 +10,50 @@
     <div id="result__container">
         <h3>You are a Turtle Frog Couchpotato!</h3>
         <img src="./fotos/couchpotato.jpeg" alt="Turtle frog as a couchpotato">
+        <div class="speechBubble" contenteditable> <span id="fact"></span>
+        </div>
         <p>You are a Turtle Frog Couchpotato, you live by the words; no hurries, no worries. You are easy going and can always recommend some awesome tv shows, but should someone dare to take your seat in the couch, they are dead to you. Turtle Frog Couchpotato wants you to go stock up on snacks and rewatch your favorite show.</p>
+       
         <div id="SoME__logo">
             <button>Facebook</button>
-            <button>Instagram</button>
+          <button>Instagram</button>
             <button>WhatsApp</button>
         </div>
     </div>
-<script src="script.js"></script>
+<script>
+
+    randomFact()
+
+    .then(response => {
+    console.log ('success');
+    })
+    .catch((err) => {
+    console.log (err);
+    });
+    async function randomFact() {
+    const response = await fetch("https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com/jokes/random", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
+		"x-rapidapi-key": "f1b9cdd739mshde6ae1d4455ff9cp12a493jsn0545889061c2",
+		"accept": "application/json"
+    }
+    // async function randomFact() {
+    // const response = await fetch("https://webknox-trivia-knowledge-facts-v1.p.rapidapi.com/trivia/random", {
+    // "method": "GET",
+    // "headers": {
+	// 	"x-rapidapi-host": "webknox-trivia-knowledge-facts-v1.p.rapidapi.com",
+	// 	"x-rapidapi-key": "f1b9cdd739mshde6ae1d4455ff9cp12a493jsn0545889061c2"
+    //     }
+    })
+    const myTxt = await response.json();
+    //change value to success, trivia if we use trivia knowledge facts:
+    //const {success, trivia} = myTxt 
+    const {value} = myTxt;
+    console.log(myTxt)
+    document.getElementById('fact').textContent = value; 
+    }
+   
+</script>
 </body>
 </html>
