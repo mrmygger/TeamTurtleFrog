@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Queston site - Turtle Frog quiz</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="Styles/questions.css">
+    <link href="https://fonts.googleapis.com/css?family=Atma&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 </head>
-<body>
-   <p>Question 1.</p>
-   <h2>What is your favorite travel destination?</h2> 
-   <div id="questions__container">
+<body id="questionPage">
+
+    <header>
+    <h1>Question 1.</h1>
+
+   <section class="progressbar">
+       <div class="circle marked"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       <div class="circle"></div>
+       
+   </section>
+
+   </header>
+
+    <main class="questionVSanswers">
+    <section class="question">
+
+   <h2>What is your <br> favorite travel <br> destination?</h2>
+    
+   <button class="backButton">Back</button>
+
+    </section>
+
+   <ul class="answers">
+
    <button>Greenland</button>
    <button>The Outback</button>
    <button>New York</button>
    <button>Katmandu</button>
-</div>
-<div id="backButton">
-    <button>Back</button>
-</div>
+
+   </ul>
+
+    </main>
 <script src="script.js"></script>
 </body>
 </html>

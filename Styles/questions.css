@@ -1,0 +1,114 @@
+/* body */
+#questionPage {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #DAECF3;
+    overflow: hidden;
+}
+
+/* header */
+
+#questionPage h1 {
+    font-size: 24px;
+    margin: 0 auto;
+    margin-left: 41vw;
+    margin-top: 5vh;
+}
+
+#questionPage header {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: grid;
+}
+
+/* The progressbar */
+.progressbar {
+    display: flex;
+    margin: 10px auto;
+}
+
+.circle {
+width: 20px;
+height: 20px;
+background: #DAECF3;
+border-radius: 15px;
+margin-left: 10px;
+}
+
+.marked {
+    background: #022D41;
+}
+
+/* Main page */
+
+.questionVSanswers {
+    display: flex
+}
+
+#questionPage h2{
+    margin: 10vh auto;
+    text-align: center;
+    font-size: 48px;
+}
+
+.backButton {
+    position: absolute;
+    width: 97.5px;
+    height: 42px;
+    bottom: 5vh;
+    left: 3vw;
+    border-radius: 15px;
+    color: #B81365;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.question {
+    background: #407D47;
+    padding: 25vh 0;
+    width: 50vw;
+}
+
+/* answers */
+
+.answers {
+    display: flex; 
+    flex-direction: column;
+    padding: 25vh 0; 
+    margin: 0;
+    min-width: 50vw;
+    background-image: url("green.png");
+    background-repeat: repeat-x;
+}
+
+.answers button {
+    width: 35vw;
+    height: 11vh;
+    max-width: 300px;
+    margin: 0 auto 20px auto;    
+    border-radius: 25px;
+    background-color: #E7E7E7;
+    color: #407D47;
+    font-size: 30px;  
+    font-family: 'Atma', cursive;  
+    box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.43);
+}
+
+button {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #E7E7E7;
+    border: none;
+}
+
+/* responsive to mobile */
+@media screen and (max-width: 551px) {
+    .answers button {
+      font-size: 20px;
+    }
+    #questionPage h2 {
+        font-size: 30px;
+        margin: 19vh auto;  
+    }
+}
+
