@@ -7,38 +7,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Lacquer&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Turtle Frog quiz</title>
 </head>
-<body>
-    <div class="main__container">
-  <div class="photo__forside"><img src="fotos/startfrog.png" alt="Turtle frog with a hat"></div> 
-  <div class="frogFeet"><img src="fotos/feetGreen_1.png" alt="frog feet background">
-  <div class="speechBubble" contenteditable>Hey mate! Do you want to know what stereotypical turtle frog you are? <br>
-<h3 class="h3__forside">Take the quiz</h3></div>
-  <div class="button">
-    <button class="blob-btn">
-      Start
-      <span class="blob-btn__inner">
-        <span class="blob-btn__blobs">
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-          <span class="blob-btn__blob"></span>
-        </span>
-      </span>
-    </button>
-    <br/>
+<body> 
+<div class="frogFeet">
+  <div class="photo__forside"><img src="fotos/startfrog.png" alt="Frog with hat"></div>
   
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <defs>
-      <filter id="goo">
-        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
-        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
-        <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
-      </filter>
-    </defs>
-  </svg>
-</div>
+    <div class="speechBubble" contenteditable>Hey mate! Do you want to know what stereotypical turtle frog you are? <br>
+      <h3>Take the quiz</h3>
+    </div>
+
+      <div class="button">
+      <button class="blob-btn">
+        Start
+        <span class="blob-btn__inner">
+          <span class="blob-btn__blobs">
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+            <span class="blob-btn__blob"></span>
+          </span>
+        </span>
+      </button>
+      <br/>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+          <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+        </filter>
+      </defs>
+    </svg>
+
 </div> 
-</div>
+
 <script src="script.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script> 
 </body>
