@@ -29,11 +29,11 @@
 }
 
 .circle {
-width: 20px;
-height: 20px;
-background: #DAECF3;
-border-radius: 15px;
-margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    background: #DAECF3;
+    border-radius: 15px;
+    margin-left: 10px;
 }
 
 .marked {
@@ -70,8 +70,11 @@ margin-left: 10px;
     width: 50vw;
 }
 
-/* answers */
-
+            /* ANSWERS */ 
+/*knap design fra - https://codepen.io/willpaige/pen/qjczo*/ 
+button {
+    outline:none;
+}
 .answers {
     display: flex; 
     flex-direction: column;
@@ -83,23 +86,43 @@ margin-left: 10px;
 }
 
 .answers button {
-    width: 35vw;
-    height: 11vh;
-    max-width: 300px;
+    outline:none;
     margin: 0 auto 20px auto;    
     border-radius: 25px;
-    background-color: #E7E7E7;
+    width: 35vw;
+    max-width: 300px;
+    height: 11vh;
+    border-radius: 25px;
+    background-color: #DAECF3;
     color: #407D47;
     font-size: 30px;  
-    font-family: 'Atma', cursive;  
-    box-shadow: 10px 10px 14px 0px rgba(0,0,0,0.43);
+    border-top: 1px solid #fff;
+    box-shadow: 10px 9px 12px 2px rgba(64,125,71,0.96);
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-shadow: -1px -1px 1px #0e501e,1px 1px 1px #6fad73;
+    color: #407D47;
 }
 
-button {
-    font-family: 'Quicksand', sans-serif;
-    background-color: #E7E7E7;
-    border: none;
+.answers button:hover {  
+    box-shadow: 5px 4px 10px 1px rgba(64,125,71,0.96);
 }
+
+.answers button:active {  
+    border-top: 1px solid #407D47; 
+    box-shadow: 0 0px 0px #407D47, 0 1px 0 #407D47, 0px 0px 0 #407D47, 0px 2px 4px #407D47, 0 2px 5px #407D47;
+}
+
+        /* ANIMATE THE BUTTON */
+.transition,
+.transition:hover,
+.transition:active{
+  -webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
 
 /* responsive to mobile */
 @media screen and (max-width: 551px) {
@@ -111,4 +134,3 @@ button {
         margin: 19vh auto;  
     }
 }
-
