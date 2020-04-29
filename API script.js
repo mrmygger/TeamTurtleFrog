@@ -6,6 +6,7 @@ const btnRepos = document.getElementById("btnQuiz")
 let resultArray=[,,,,,,,,,]
 let profileScore=[,,,,,]
 let file_content="";
+let txtWinner="";
   
 btnRepos.addEventListener("click", getRepos)
 
@@ -69,16 +70,41 @@ function determinQuizwinner(){
       countHipster=countHipster+helperArray[0];
       countCatLady=countCatLady+helperArray[1];
       countPartyAnimal=countPartyAnimal+helperArray[2];
-      countCouchpotato=countCouchpotato+helperArray[2];
+      countCouchpotato=countCouchpotato+helperArray[3];
       countFitnessFreak=countFitnessFreak+helperArray[4];
       countGamer=countGamer+helperArray[5];
   
   }
-  console.log("Hipster" ,countHipster);
-  console.log("Catlady :", countCatLady);
-  console.log("The Party Animal: ",countPartyAnimal);
-  console.log("Couchpotato: ",countCouchpotato);
-  console.log("The Fitness Freak: ", countFitnessFreak);
-  console.log("The Gamer: ", countGamer);  
+    //Sort result
+
+  let winner=Math.max(countHipster, countCatLady, countPartyAnimal,countCouchpotato,countFitnessFreak,countGamer);
+  
+
+  if (countHipster==winner){
+    txtWinner="The Hipster";
+  }
+  if (countCatLady==winner){
+    txtWinner="The Catlady";
+  }
+  if (countPartyAnimal==winner){
+    txtWinner="The Party Animal";
+  }
+  if (countCouchpotato==winner){
+    txtWinner="The Couchpotato";
+  }
+  if (countFitnessFreak==winner){
+    txtWinner="The Fitness Freak";
+  }
+  if (countGamer==winner){
+    txtWinner="The Gamer";
+  }
+
+  //Write to local storage
+  window.localStorage.setItem('Winner',txtWinner);
+
+  //Go to result page
+  window.location = "final.html";
+   
 }
 /*End render Question*/
+
