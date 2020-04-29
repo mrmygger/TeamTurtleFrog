@@ -52,18 +52,22 @@
     font-size: 48px;
 }
 
-.backButton {
+#backButton {
     position: absolute;
     width: 97.5px;
     height: 42px;
     bottom: 5vh;
     left: 3vw;
     border-radius: 15px;
-    color: #B81365;
+    color: #407D47;
     font-weight: bolder;
     font-size: 25px;
+    background-color: #DAECF3;
 }
-
+#backButton:active, #backButton:hover {
+    color: #DAECF3;
+    background-color: #B4B644 ;
+}
 .question {
     background: #407D47;
     padding: 25vh 0;
@@ -107,16 +111,34 @@ button {
 .answers button:hover {  
     box-shadow: 5px 4px 10px 1px rgba(64,125,71,0.96);
 }
+/*bounce med hjælp fra - https://codepen.io/dagmarfrida/pen/NWGvpwO*/
+.bounce:active {  
+        animation: shrink .4s ease-in-out;
+      }
 
-.answers button:active {  
-    border-top: 1px solid #407D47; 
-    box-shadow: 0 0px 0px #407D47, 0 1px 0 #407D47, 0px 0px 0 #407D47, 0px 2px 4px #407D47, 0 2px 5px #407D47;
-}
+      
+        @keyframes shrink {
+        0% { 
+          transform: scale(1); 
+        }
+        25% {
+            transform: scale(0.85);
+        } 
+        50% { 
+          transform: scale(1); 
+        }
+        75% {
+            transform: scale(0.85);
+        }
+        100% {
+          transform: scale(1); 
+        }
+      }
+   
 
         /* ANIMATE THE BUTTON */
 .transition,
-.transition:hover,
-.transition:active{
+.transition:hover{
   -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
