@@ -55,6 +55,8 @@ function renderHTML(data) {
       resultArray[quizzanswer[0]]=quizzanswer[1]; 
       })
   }
+  //Make first question visible
+  document.getElementById("1").style.display = "block";
 
   //Add eventlisteners
   //Get all <button> elements in the document with class="nextbtn"
@@ -143,10 +145,5 @@ function determinQuizwinner(){
    
 }
 
-document.getElementById('start').addEventListener('click', start);
-
-function start(){
-  document.getElementById("1").style.display = "block";
-}
 /*End render Question*/
 
