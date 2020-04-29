@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="./Styles/styles.css">
     <title>Result page - Turtle Frog quiz</title>
 </head>
-<body>
+<body onload ="renderResult()">
     <div id="result__container">
-        <h3>You are a Turtle Frog Couchpotato!</h3>
-        <img src="./fotos/couchpotato.jpeg" alt="Turtle frog as a couchpotato">
+        <h3 id="profileHeader" ></h3>
+        <img id = "profileImage">
         <div class="speechBubble" contenteditable> <span id="fact"></span>
         </div>
-        <p>You are a Turtle Frog Couchpotato, you live by the words; no hurries, no worries. You are easy going and can always recommend some awesome tv shows, but should someone dare to take your seat in the couch, they are dead to you. Turtle Frog Couchpotato wants you to go stock up on snacks and rewatch your favorite show.</p>
+        <p id="profileTekst"></p>
        
         <div id="SoME__logo">
             <button>Facebook</button>
@@ -20,6 +20,7 @@
             <button>WhatsApp</button>
         </div>
     </div>
+    <script src="final.js"></script>
 <script src="final_script.js">
 </script>   
 
