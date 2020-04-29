@@ -28,26 +28,31 @@ async function getRepos() {
 /*Render question*/
 function renderHTML(data) {
   const questionContainer = document.getElementById("question");
-  let HTMLString = "";
 
-  for (let i = 0; i < data.length; i++) {       
-      
-      HTMLString += "<li style=display:none id=" + data[i].QuestionId+ "> <p> Question no. " + data[i].QuestionId + " " + data[i].Question;
+
+
+   
+  let HTMLString = "<header><h1>Question 1.</h1><section class=progressbar><div class=circle marked></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div></section></header><main class=questionVSanswers>";
+
+  for (let i = 0; i < data.length; i++) {  
+    
+      HTMLString += "<li style=display:none id=" + data[i].QuestionId+ "><section class=question> <h2>"  + data[i].Question +"</h2><button id=backButton class=backButton>Back</button></section><ul class=answers>";
       let HTMLhelperstring = "";
       for (let j = 0; j <= data[i].Answers.length-1; j++) {
-           HTMLhelperstring += "<button id = " +i+"_"+ j + " class=quizzbutton>" + data[i].Answers[j] + "</button>"  ;
+           HTMLhelperstring += "<button id = " +i+"_"+ j + " class=transition>" + data[i].Answers[j] + "</button>"  ;
           
       }       
-      HTMLhelperstring += "</p>";
-      HTMLString += HTMLhelperstring + "<button id=btn_" + data[i].QuestionId + " class=nextbtn>Next</button></li>";       
+     // HTMLhelperstring += "</main>";
+      HTMLString += HTMLhelperstring + "<button id=btn_" + data[i].QuestionId + " class=nextbtn>Next</button></ul></li>";       
       
   }
+  HTMLString+="</main>";
   questionContainer.insertAdjacentHTML('beforeend', HTMLString);
 
   //Add eventlisteners
-  //Get all <button> elements in the document with class="quizzbutton"
+  //Get all <button> elements in the document with class="transition"
 
-  const buttons = document.querySelectorAll(".quizzbutton");
+  const buttons = document.querySelectorAll(".transition");
   for (const button of buttons) {
     button.addEventListener('click', function(event) {
       //Første giver spørgmål/position andet tal giver svar
@@ -56,7 +61,7 @@ function renderHTML(data) {
       })
   }
   //Make first question visible
-  document.getElementById("1").style.display = "block";
+  document.getElementById("1").style.display = "flex";
 
   //Add eventlisteners
   //Get all <button> elements in the document with class="nextbtn"
@@ -70,8 +75,9 @@ function renderHTML(data) {
       let hlpInt=hlpArray[1];
       hlpInt++;
       document.getElementById(hlpArray[1]).style.display="none";
+      
       if (hlpInt<11){
-        document.getElementById(hlpInt).style.display="block";
+        document.getElementById(hlpInt).style.display="flex";
          } 
       if (hlpInt==10){
         //next button skal hides
