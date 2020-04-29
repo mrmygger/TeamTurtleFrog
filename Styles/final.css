@@ -1,0 +1,107 @@
+/* body */
+#final {
+    background-image: url("frogfeetred.png");
+    display: grid;
+    font-family: 'Quicksand', sans-serif;
+    overflow: hidden;
+}
+
+/* The white container */
+#result__container {
+    background-color: white;
+    border-radius: 50px; 
+    max-width: 1360px;
+    max-height: 935px;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2%;
+    box-shadow: 10px 9px 12px 2px rgba(0,0,0,0.40);
+    margin: 5vh auto;
+}
+
+/* image */
+#profileImage {
+    max-height: 600px;
+    max-width: 600px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+/* you are a ... */
+.resultHeader {
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.resultHeader h1, h3 {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#profileHeader {
+    font-weight: 500;
+    font-size: 108px;
+    font-weight: 600;
+}
+
+.resultHeader h1 {
+    font-size: 51px;
+    margin-bottom: -25px;
+}
+
+/* profile text */
+#profileTekst {
+    font-size: 35px;
+}
+
+/* some share */
+#SoME__logo {
+    grid-column: 2 / 3;
+    display: flex;  
+    justify-content: space-evenly;
+}
+
+#SoME__logo button {
+    border: none;
+    background: none;
+}
+
+#SoME__logo img {
+    height: 100px;
+    width: 100px;
+}
+
+/* speechboble */
+.speechBubble {
+	position: relative;
+	background: white;
+    border-radius: .4em;
+    width: 390px;
+    height: 170px;
+    box-shadow: 10px 9px 12px 2px rgba(0,0,0,0.40);
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-left: 268px
+}
+
+.speechBubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 20%;
+	width: 0;
+	height: 0;
+	border: 34px solid transparent;
+	border-top-color: white;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -17px;
+    margin-bottom: -34px;
+}
+
+#fact {
+    margin: 5%;
+    font-size: 24px;
+}
+

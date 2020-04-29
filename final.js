@@ -27,12 +27,14 @@ function renderResult(){
           imgProfileURL="./fotos/partyfrog.jpg";
           imgAlttxt="Turtle frog as a party animal";  
           break;
+
         case "The Couchpotato":
-          txtHeading="You are a Turtle Frog Couchpotato!";
+          txtHeading=`You are a Turtle Frog Couchpotato!`;
           txtProfile="You are a Turtle Frog Couchpotato, you live by the words; no hurries, no worries. You are easy going and can always recommend some awesome tv shows, but should someone dare to take your seat in the couch, they are dead to you. Turtle Frog Couchpotato wants you to go stock up on snacks and rewatch your favorite show."
           imgProfileURL="./fotos/couchpotatofrog.jpg";
           imgAlttxt="Turtle frog as a couchpotato";  
          break;
+
         case "The Fitness Freak":
           txtHeading="You are a Fitness Turtle Frog!";
           txtProfile="You are a Fitness Turtle Frog, you are always looking for ways to keep active, and will most likely be doing squats whenever the opportunity arises, that Kardashian butt is not gonna make itself. You take more selfies than instagram models and  own more tanktops than you would like to admit. Fitness Turtle Frog wants you to stop measuring you biceps and go boil yourself some chicken and maybe even treat yourself to a protein shake.";
@@ -47,7 +49,7 @@ function renderResult(){
           break;
                                 
         default:
-          txtHeading="You are a Turtle Frog Couchpotato!";
+          txtHeading="Turtle Frog Couchpotato!";
           txtProfile="You are a Turtle Frog Couchpotato, you live by the words; no hurries, no worries. You are easy going and can always recommend some awesome tv shows, but should someone dare to take your seat in the couch, they are dead to you. Turtle Frog Couchpotato wants you to go stock up on snacks and rewatch your favorite show."
           imgProfileURL="./fotos/couchpotatofrog.jpg";
           imgAlttxt="Turtle frog as a couchpotato";  

@@ -3,23 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="stylesheet" href="Styles/final.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <title>Result page - Turtle Frog quiz</title>
 </head>
-<body onload ="renderResult()">
-    <div id="result__container">
+<body onload ="renderResult()" id="final">
+
+    <main id="result__container">
+
+        <section class="resultHeader">
+        <h1>You are a</h1>
         <h3 id="profileHeader" ></h3>
+        </section>
+
         <img id = "profileImage">
-        <div class="speechBubble" contenteditable> <span id="fact"></span>
-        </div>
+
+        <div class="speechBubble" contenteditable> <p id="fact"></p></div>
+
         <p id="profileTekst"></p>
        
-        <div id="SoME__logo">
-            <button>Facebook</button>
-          <button>Instagram</button>
-            <button>WhatsApp</button>
-        </div>
-    </div>
+        <section id="SoME__logo">
+            <button><img src="fotos/some/facebook (1).png"></button>
+          <button><img src="fotos/some/instagram-sketched.png"></button>
+            <button><img src="fotos/some/brands-and-logotypes.png"></button>
+        </section>
+
+    </main>
     <script src="final.js"></script>
 <script src="final_script.js">
 </script>   
