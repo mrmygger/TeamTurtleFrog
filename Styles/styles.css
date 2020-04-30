@@ -1,32 +1,50 @@
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
+}
+
+body {
   background-image: url(/fotos/Background_forside.png);
 }
 
 /*BACKGROUND */
-.photo__forside img {
+.photo__forside {
   height: 100vh;
   width: 50vw;
   top: 0;
 }
 
+.photo__forside img {
+  height: 100%;
+  width: 100%;
+}
+
+.frogFeet {
+  display: -ms-grid;
+  display: grid;
+  
+      grid-template-columns: repeat(4, 25vw);
+
+      grid-template-rows: repeat(4, 25vh);
+}
+
 /*Speech bubble - https://codepen.io/run-time/pen/VNRBJd */
 .speechBubble {
+  font-size: 24px;
   position: absolute;
-  width: 778px;
-  height: 434px;
-  left: 0px;
-  top: 44px;
+  width: 45vw;
+  height: 34vh;
+  left: 33vw;
+  top: 10px;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  -ms-grid-column: 2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
       grid-column-start: 2;
-  -ms-grid-row: 1;
+
       grid-row-start: 1;
   border-radius: 40px;
   padding: 24px;
@@ -36,8 +54,13 @@
   font-family: 'Quicksand', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 2em;
+  line-height: normal;
+}
+
+.speechBubble h3 {
+  font-size: 1.5em;
+  margin-top: .3em;
 }
 
 .speechBubble:before {
@@ -56,29 +79,32 @@
 /*Blob button - https://codepen.io/hilwat/pen/BeemVX*/
 .button {
   -ms-grid-column: 3;
-      grid-column-start: 3;
-  -ms-grid-row: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / span 2;
+  
       grid-row-start: 4;
   margin-top: 0px;
   text-align: right;
   border-radius: 30px;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .blob-btn {
   position: absolute;
-  width: 480px;
-  height: 95px;
+  width: 28vw;
+  height: 10vh;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   position: relative;
-  padding: 20px 46px;
+  padding: 10px 46px;
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
-  color: #B81365;
-  font-size: 24px;
+  color: #000000;
+  font-size: 48px;
   font-weight: bold;
   background-color: transparent;
   outline: none;
@@ -97,8 +123,9 @@
   top: 0;
   width: 100%;
   height: 100%;
-  border: 6px solid #B81365;
-  border-radius: 30px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
 }
 
 .blob-btn:after {
@@ -144,18 +171,18 @@
   display: block;
   height: 100%;
   -webkit-filter: url("#goo");
-          filter: url("#goo");
+  filter: url("#goo");
 }
 
 .blob-btn__blob {
   position: absolute;
   top: 6px;
-  width: 25%;
+  width: 30%;
   height: 100%;
   background: #B81365;
   border-radius: 50%;
   -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
-          transform: translate3d(0, 150%, 0) scale(1.7);
+  transform: translate3d(0, 150%, 0) scale(1.7);
   -webkit-transition: -webkit-transform 0.45s;
   transition: -webkit-transform 0.45s;
   transition: transform 0.45s;
@@ -165,45 +192,87 @@
 @supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
   .blob-btn__blob {
     -webkit-transform: translate3d(0, 150%, 0) scale(1.4);
-            transform: translate3d(0, 150%, 0) scale(1.4);
+    transform: translate3d(0, 150%, 0) scale(1.4);
   }
 }
 
 .blob-btn__blob:nth-child(1) {
   left: 0%;
   -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transition-delay: 0s;
 }
 
 .blob-btn__blob:nth-child(2) {
   left: 30%;
   -webkit-transition-delay: 0.08s;
-          transition-delay: 0.08s;
+  transition-delay: 0.08s;
 }
 
 .blob-btn__blob:nth-child(3) {
   left: 60%;
   -webkit-transition-delay: 0.16s;
-          transition-delay: 0.16s;
+  transition-delay: 0.16s;
 }
 
 .blob-btn__blob:nth-child(4) {
   left: 90%;
   -webkit-transition-delay: 0.24s;
-          transition-delay: 0.24s;
+  transition-delay: 0.24s;
 }
 
 .blob-btn:hover .blob-btn__blob {
   -webkit-transform: translateZ(0) scale(1.7);
-          transform: translateZ(0) scale(1.7);
+  transform: translateZ(0) scale(1.7);
 }
 
 @supports ((-webkit-filter: url("#goo")) or (filter: url("#goo"))) {
   .blob-btn:hover .blob-btn__blob {
     -webkit-transform: translateZ(0) scale(1.4);
-            transform: translateZ(0) scale(1.4);
+    transform: translateZ(0) scale(1.4);
   }
 }
 
-/*QUESTION SITE BUTTONS*/
+@media screen and (min-width: 1296px) {
+  .speechBubble {
+    width: 33vw;
+    height: 35vh;
+    left: 33vw;
+    top: 1em;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        grid-column-start: 2;
+
+        grid-row-start: 1;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2em;
+    line-height: normal;
+  }
+  .speechBubble h3 {
+    font-size: 1.5em;
+    margin-top: .5em;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .speechBubble {
+    font-size: 22px;
+    line-height: normal;
+    height: 22vh;
+    top: 5em;
+    width: 50vw;
+    left: 25vw;
+  }
+  .speechBubble h3 {
+    font-size: 30px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

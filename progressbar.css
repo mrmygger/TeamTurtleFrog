@@ -1,0 +1,69 @@
+/* Base styles and helper stuff */
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 5px 10px;
+    border: 1px solid black;
+    transition: 250ms background-color;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+button:disabled:hover {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 40px;
+}
+
+#stepProgressBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.step {
+    text-align: center;
+}
+
+.bullet {
+    border: 1px solid #022D41;
+    height: 23px;
+    width: 23px;
+    border-radius: 100%;
+    color: #022D41;
+    display: inline-block;
+    position: relative;
+    transition: background-color 500ms;
+    line-height: 23px;
+}
+.bullet.completed {
+    color: white;
+    background-color: #022D41;
+}
+/*.bullet.completed::after {
+    content: '';
+    position: absolute;
+    right: -38px;
+    bottom: 10px;
+    height: 2px;
+    width: 40px;
+    background-color: #28a745;
+}*/
