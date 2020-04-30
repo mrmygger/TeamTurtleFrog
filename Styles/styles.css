@@ -4,8 +4,10 @@
   margin: 0;
   padding: 0;
   font-family: 'Quicksand', sans-serif;
+  }
+html {
+  overflow: hidden;
 }
-
 body {
   background-image: url(/fotos/Background_forside.png);
 }
@@ -13,7 +15,7 @@ body {
 /*BACKGROUND */
 .photo__forside {
   height: 100vh;
-  width: 50vw;
+  width: 70vw;
   top: 0;
 }
 
@@ -29,6 +31,17 @@ body {
       grid-template-columns: repeat(4, 25vw);
   -ms-grid-rows: (25vh)[4];
       grid-template-rows: repeat(4, 25vh);
+      overflow: hidden;
+}
+.photo__forside {
+  height: 100vh;
+  width: 60vw;
+  top: 0;
+}
+
+.photo__forside img {
+  height: 100%;
+  width: 100%;
 }
 
 /*Speech bubble - https://codepen.io/run-time/pen/VNRBJd */
@@ -38,16 +51,24 @@ body {
   top: 1em;
   background: white;
   border-radius: 40px;
-  width: 45vw;
+  width: 55vw;
   height: 34vh;
+  max-height: 300px;
+  background: #FFFFFF;
   -webkit-box-shadow: 10px 9px 12px 2px rgba(0, 0, 0, 0.4);
-          box-shadow: 10px 9px 12px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 10px;
+  padding: 10px;
   text-align: center;
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 2em;
   line-height: normal;
-  padding: 10px;
+}
+.speechBubble h3 {
+  font-size: 1.5em;
+  margin-top: .5em;
 }
 
 .speechBubble:after {
@@ -65,51 +86,6 @@ body {
   margin-bottom: -34px;
 }
 
-.speechBubble h3 {
-  font-size: 1.5em;
-  margin-top: .4em;
-}
-
-/*.speechBubble {
-  font-size: 24px;
-  position: absolute;
-  width: 45vw;
-  height: 34vh;
-  left: 33vw;
-  top: 10px;
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  grid-column-start: 2;
-  grid-row-start: 1;
-  border-radius: 40px;
-  padding: 24px;
-  text-align: center;
-  color: #000;
-  position: absolute;
-  font-family: 'Quicksand', sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 2em;
-  line-height: normal;
-}
-
-.speechBubble h3 {
-  font-size: 1.5em;
-  margin-top: .3em;
-}
-.speechBubble:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 100px solid #fff;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #fff;
-  border-bottom: 100px solid transparent;
-  left: 32px;
-  bottom: -100px;
-}*/
 /*Blob button - https://codepen.io/hilwat/pen/BeemVX*/
 .button {
   -ms-grid-column: 3;
@@ -284,7 +260,7 @@ picture img {
   z-index: -1;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 769px) {
   .speechBubble {
     width: 48vw;
     height: 36vh;
@@ -306,21 +282,23 @@ picture img {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .photo__forside {
-    height: 80vh;
-    width: 70vw;
+    height: 50vh;
+    width: 80vw;
     top: 0;
-    margin-left: 15vh;
-    margin-top: 10vh;
-  }
+    margin-left: 10vw;
+    margin-top: 25vh;
+    overflow: hidden;
+}
   
   .photo__forside img {
     height: 100%;
     width: 100%;
   }
   .speechBubble {
-    font-size: 16px;
+    font-size: 18px;
+    padding: 20px;
     line-height: normal;
     width: 70vw;
     margin: auto;
@@ -331,10 +309,11 @@ picture img {
     font-size: 25px;
   }
   .button {
-    margin-top: 0px;
+    margin-top: 30px;
     text-align: center;
     -ms-grid-column-align: center;
     overflow: hidden;
+    max-height: 8vh;
   }
   .blob-btn {
     width: 35vw;

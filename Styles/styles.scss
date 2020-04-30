@@ -204,7 +204,7 @@ body {
   width: 30%;
   height: 100%;
   background: #B81365;
-  border-radius: 10px;
+  border-radius: 50%;
   -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
           transform: translate3d(0, 150%, 0) scale(1.7);
   -webkit-transition: -webkit-transform 0.45s;
@@ -275,7 +275,7 @@ picture img{
 .photo__forside{
   z-index: -1;
 }
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 737px) {
   .speechBubble {
     width: 48vw;
     height: 36vh;
