@@ -22,12 +22,12 @@ async function getRepos() {
 function renderHTML(data) {
   const questionContainer = document.getElementById("question");
    
-  let HTMLString = "<header><h1></h1><section class=progressbar>"
+  let HTMLString = "<header><h1>Question</h1><section class=progressbar><div class='circle' id='100' style='background: black;'>1</div><div class='circle' id='101'>2</div><div class='circle' id='102'>3</div><div class='circle' id='103'>4</div><div class='circle' id='104'>5</div><div class='circle' id='105'>6</div><div class='circle' id='106'>7</div><div class='circle' id='107'>8</div><div class='circle' id='108'>9</div><div class='circle' id='109'>10</div>"
 
-  for(n=100;n<110;n++){
-    HTMLString+="<div class=circle id=" + n + "></div>";
+  //for(n=100;n<110;n++){
+   // HTMLString+="<div class=circle id=" + n + "></div>";
     //<div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div>
-  }
+//  }
   HTMLString+="</section></header><main class=questionVSanswers>";
 
   for (var i = 0; i < data.length; i++) {  
@@ -43,7 +43,7 @@ function renderHTML(data) {
       HTMLString += HTMLhelperstring + "<button id=btn_" + data[i].QuestionId + " class=nextbtn>Next</button></ul></li>"; 
     }
   else{
-    HTMLString += HTMLhelperstring + "<button id='btnCalculate' class=showResultbtn>Show result</button></ul></li>";
+    HTMLString += HTMLhelperstring + "<button id='btnCalculate' class=showResultbtn>Frog Me!</button></ul></li>";
  
   }     
       
@@ -84,6 +84,7 @@ function renderHTML(data) {
       let hlpInt=hlpArray[1];
       if (resultArray[hlpInt-1]>-1){
         document.getElementById(+hlpInt+100).style.background="black";
+
         hlpInt++;
         document.getElementById(hlpArray[1]).style.display="none";
         
@@ -116,7 +117,7 @@ function renderHTML(data) {
       let bckhlpInt=bckhlpArray[1];
       
       bckhlpInt--;
-      document.getElementById(+bckhlpInt+100).style.background="white";
+      document.getElementById(+bckhlpInt+100).style.background="#DAECF3";
       document.getElementById(bckhlpArray[1]).style.display="none";
       
       if (bckhlpInt>0){
