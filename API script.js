@@ -9,10 +9,12 @@ function loadQuiz(){
 const url = "https://api.github.com/repos/clauspreuss/FrogQuizz/contents/frogquiz";
 const btnRepos = document.getElementById("btnQuiz");
 
+/* only for test development
 document.getElementById('btnCalculate').style.display="none";  
-//For testing/development
-  //btnRepos.addEventListener("click", getRepos);
-  document.getElementById('btnQuiz').style.display="none";
+*/
+document.getElementById('btnQuiz').style.display="none";
+
+btnRepos.addEventListener("click", getRepos);
 
 getRepos();
 
@@ -43,13 +45,20 @@ function renderHTML(data) {
           
       }       
      // HTMLhelperstring += "</main>";
-      HTMLString += HTMLhelperstring + "<button id=btn_" + data[i].QuestionId + " class=nextbtn>Next</button></ul></li>";       
+  if(i<9){
+      HTMLString += HTMLhelperstring + "<button id=btn_" + data[i].QuestionId + " class=nextbtn>Next</button></ul></li>"; 
+    }
+  else{
+    HTMLString += HTMLhelperstring + "<button id='btnCalculate'>Show result</button></ul></li>";
+ 
+  }     
       
   }
   HTMLString+="</main>";
   questionContainer.insertAdjacentHTML('beforeend', HTMLString);
 
   //Add eventlisteners
+  document.getElementById('btnCalculate').addEventListener('click', determinQuizwinner);
   //Get all <button> elements in the document with class="transition"
 
   const buttons = document.querySelectorAll(".transition");
@@ -82,7 +91,7 @@ function renderHTML(data) {
       if (hlpInt==10){
         //next button skal hides
         document.getElementById("btn_10").style.display="none";
-        document.getElementById('btnCalculate').style.display="block";
+        //document.getElementById('btnCalculate').style.display="block";
     }
     })
   }
@@ -90,12 +99,7 @@ function renderHTML(data) {
 
 }
 
-
-
-
-
-
-document.getElementById('btnCalculate').addEventListener('click', determinQuizwinner);
+//document.getElementById('btnCalculate').addEventListener('click', determinQuizwinner);
 
 function determinQuizwinner(){
   
