@@ -21,13 +21,16 @@ async function getRepos() {
 /*Render question*/
 function renderHTML(data) {
   const questionContainer = document.getElementById("question");
-
-
-
    
-  let HTMLString = "<header><h1>Question 1.</h1><section class=progressbar><div class=circle marked></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div></section></header><main class=questionVSanswers>";
+  let HTMLString = "<header><h1></h1><section class=progressbar>"
 
-  for (let i = 0; i < data.length; i++) {  
+  for(n=100;n<110;n++){
+    HTMLString+="<div class=circle id=" + n + "></div>";
+    //<div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div><div class=circle></div>
+  }
+  HTMLString+="</section></header><main class=questionVSanswers>";
+
+  for (var i = 0; i < data.length; i++) {  
     
       HTMLString += "<li style=display:none id=" + data[i].QuestionId+ "><section class=question> <h2>"  + data[i].Question +"</h2><button id=backButton_" + data[i].QuestionId + " class=backButton>Back</button></section><ul class=answers>";
       let HTMLhelperstring = "";
@@ -63,6 +66,10 @@ function renderHTML(data) {
   }
   //Make first question & back button visible
   document.getElementById("1").style.display = "flex";
+  //style first progress bar
+  document.getElementById("100").style.background="black";
+
+
   
   //Add eventlisteners
   //Get all <button> elements in the document with class="nextbtn"
@@ -76,26 +83,23 @@ function renderHTML(data) {
       
       let hlpInt=hlpArray[1];
       if (resultArray[hlpInt-1]>-1){
-      hlpInt++;
-      document.getElementById(hlpArray[1]).style.display="none";
-      
-      if (hlpInt<11){
-        document.getElementById(hlpInt).style.display="flex";
+        document.getElementById(+hlpInt+100).style.background="black";
+        hlpInt++;
+        document.getElementById(hlpArray[1]).style.display="none";
+        
+        if (hlpInt<11){
+          document.getElementById(hlpInt).style.display="flex";
          } 
-      if (hlpInt==10){
+        if (hlpInt==10){
         //next button skal hides
         //document.getElementById("btn_10").style.display="none";
         //document.getElementById('btnCalculate').style.display="block";
-      }
-    }else{
-      console.log(hlpInt);
-      console.log(resultArray[hlpInt])
-      alert("Select an answer befor you click next!")
+        }
+      }else{
+        alert("Select an answer before you click next!");
     }
     })
   }
-
-
 
   //
 
@@ -110,37 +114,29 @@ function renderHTML(data) {
       //Make me invincible and show last question until question 1
       //hlpArray=current question and hlpInt-- previous question
       let bckhlpInt=bckhlpArray[1];
+      
       bckhlpInt--;
+      document.getElementById(+bckhlpInt+100).style.background="white";
       document.getElementById(bckhlpArray[1]).style.display="none";
       
       if (bckhlpInt>0){
         document.getElementById(bckhlpInt).style.display="flex";
          } 
       if (bckhlpInt==0){
-        //next button skal hides
-        //document.getElementById("btn_10").style.display="none";
-        //document.getElementById('btnCalculate').style.display="block";
         //Go to start page
-  window.location = "index.html";
+        window.location = "index.html";
         
       }
     })
   }
-
-  //
-
-
-
-
-
 }
 
 }
 
-//document.getElementById('btnCalculate').addEventListener('click', determinQuizwinner);
+
 
 function determinQuizwinner(){
-  
+  if (resultArray[9]>-1){
   let countHipster=0;
   let countCatLady=0;
   let countPartyAnimal=0;
@@ -190,7 +186,9 @@ function determinQuizwinner(){
 
   //Go to result page
   window.location = "final.html";
-   
+}else{
+  alert("Select an answer before you click show result!");
+} 
 }
 
 /*End render Question*/
