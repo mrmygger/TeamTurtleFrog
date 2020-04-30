@@ -49,7 +49,7 @@ function renderHTML(data) {
       HTMLString += HTMLhelperstring + "<button id=btn_" + data[i].QuestionId + " class=nextbtn>Next</button></ul></li>"; 
     }
   else{
-    HTMLString += HTMLhelperstring + "<button id='btnCalculate'>Show result</button></ul></li>";
+    HTMLString += HTMLhelperstring + "<button id='btnCalculate' class=showResultbtn>Show result</button></ul></li>";
  
   }     
       
