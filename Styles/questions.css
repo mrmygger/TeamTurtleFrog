@@ -75,7 +75,7 @@
     width: 50vw;
 }
 
-            /* ANSWERS */ 
+/* ANSWERS */ 
 /*knap design fra - https://codepen.io/willpaige/pen/qjczo*/ 
 button {
     outline:none;
@@ -148,7 +148,7 @@ button {
     background-color: #407D47;
     box-shadow: none
 }
-#btn_1 {
+#btn_1, #btn_2, #btn_3, #btn_4, #btn_5, #btn_6, #btn_7, #btn_8, #btn_9, #btn_10 {
     width: 97.5px;
     height: 42px;
     border-radius: 15px;
@@ -162,6 +162,7 @@ button {
     right: 3vw;
     bottom: 5vh;
     }
+
 /* responsive to mobile */
 @media screen and (max-width: 551px) {
     .answers button {
