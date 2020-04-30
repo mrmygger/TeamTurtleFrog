@@ -112,10 +112,9 @@ button {
     box-shadow: 5px 4px 10px 1px rgba(64,125,71,0.96);
 }
 /*bounce med hjælp fra - https://codepen.io/dagmarfrida/pen/NWGvpwO*/
-.bouncebtn:active {  
+.transition:active {  
         animation: shrink .4s ease-in-out;
       }
-
       
         @keyframes shrink {
         0% { 
@@ -138,8 +137,9 @@ button {
    
 
         /* ANIMATE THE BUTTON */
-.bouncebtn,
-.bouncebtn:hover{
+        
+.transition,
+.transition:hover{
   -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
