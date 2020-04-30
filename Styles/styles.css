@@ -276,3 +276,23 @@ body {
   }
 }
 /*# sourceMappingURL=styles.css.map */
+
+/*Frog start animation*/
+
+picture img{
+  width: 70%;
+  height: auto;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  z-index: +1;
+  
+}
+
+.speechBubble{
+  z-index: -1;
+}
+
+.photo__forside{
+  z-index: -1;
+}
