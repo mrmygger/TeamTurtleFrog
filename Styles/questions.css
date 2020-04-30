@@ -64,6 +64,7 @@
     font-weight: bolder;
     font-size: 25px;
     background-color: #DAECF3;
+    border: none; 
 }
 .backButton:active, #backButton:hover {
     color: #DAECF3;
@@ -163,6 +164,20 @@ button {
     bottom: 5vh;
     }
 
+#btnCalculate {
+    width: 97.5px;
+    height: fit-content;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: 25px;
+    text-shadow: none;
+    box-shadow: none;
+    background-color: #407D47;
+    color: #DAECF3;
+    position: absolute;
+    right: 3vw;
+    bottom: 5vh;
+}
 /* responsive to mobile */
 @media screen and (max-width: 551px) {
     .answers button {
