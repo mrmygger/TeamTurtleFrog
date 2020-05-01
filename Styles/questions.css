@@ -162,6 +162,7 @@ button {
     position: absolute;
     right: 3vw;
     bottom: 5vh;
+    margin: 0;
     }
 
 #btnCalculate {
@@ -177,6 +178,7 @@ button {
     position: absolute;
     right: 3vw;
     bottom: 5vh;
+    margin: 0;
 }
 /* responsive to mobile */
 @media screen and (max-width: 551px) {
