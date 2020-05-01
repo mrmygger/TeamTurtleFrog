@@ -9,7 +9,7 @@ html {
   overflow: hidden;
 }
 body {
-  background-image: url(/fotos/Background_forside.png);
+  background-image: url(Background_forside.png);
 }
 
 /*BACKGROUND */
@@ -33,9 +33,10 @@ body {
       grid-template-rows: repeat(4, 25vh);
       overflow: hidden;
 }
+
 .photo__forside {
   height: 100vh;
-  width: 60vw;
+  width: 50vw;
   top: 0;
 }
 
