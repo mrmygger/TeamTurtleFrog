@@ -281,6 +281,11 @@ picture img {
     font-size: 1.5em;
     margin-top: .5em;
   }
+  .photo__forside {
+    width: 50vw;
+    top: 0;
+    
+}
 }
 
 @media screen and (max-width: 480px) {
